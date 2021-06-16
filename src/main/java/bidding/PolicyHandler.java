@@ -17,9 +17,13 @@ public class PolicyHandler{
 
         System.out.println("\n\n##### listener SendSms : " + successBidderRegistered.toJson() + "\n\n");
 
-        // Sample Logic //
-        SmsHistory smsHistory = new SmsHistory();
-        smsHistoryRepository.save(smsHistory);
+        if(successBidderRegistered.isMe()){
+            SmsHistory smsHistory = new SmsHistory();
+            smsHistory.setPhoneNumber(successBidderRegistered.getPhoneNumber());
+            smsHistory.setContents("낙찰 되었습니다~~~");
+
+            smsHistoryRepository.save(smsHistory);
+        }
             
     }
     @StreamListener(KafkaProcessor.INPUT)
@@ -29,9 +33,13 @@ public class PolicyHandler{
 
         System.out.println("\n\n##### listener SendSms : " + biddingParticipationCanceled.toJson() + "\n\n");
 
-        // Sample Logic //
-        SmsHistory smsHistory = new SmsHistory();
-        smsHistoryRepository.save(smsHistory);
+        if(biddingParticipationCanceled.isMe()){
+            SmsHistory smsHistory = new SmsHistory();
+            smsHistory.setPhoneNumber(biddingParticipationCanceled.getPhoneNumber());
+            smsHistory.setContents("입찰서 등록 취소");
+
+            smsHistoryRepository.save(smsHistory);
+        }
             
     }
     @StreamListener(KafkaProcessor.INPUT)
@@ -41,9 +49,13 @@ public class PolicyHandler{
 
         System.out.println("\n\n##### listener SendSms : " + biddingParticipated.toJson() + "\n\n");
 
-        // Sample Logic //
-        SmsHistory smsHistory = new SmsHistory();
-        smsHistoryRepository.save(smsHistory);
+        if(biddingParticipated.isMe()){
+            SmsHistory smsHistory = new SmsHistory();
+            smsHistory.setPhoneNumber(biddingParticipated.getPhoneNumber());
+            smsHistory.setContents("입찰서 등록 완료");
+
+            smsHistoryRepository.save(smsHistory);
+        }
             
     }
 

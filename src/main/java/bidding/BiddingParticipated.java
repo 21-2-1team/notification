@@ -13,68 +13,68 @@ public class BiddingParticipated extends AbstractEvent {
     private Integer offerPrice;
     private String offerContents;
     private Boolean feePaymentFlag;
-
+    private String phoneNumber;
+    
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
     public String getNoticeNo() {
         return noticeNo;
     }
-
     public void setNoticeNo(String noticeNo) {
         this.noticeNo = noticeNo;
     }
     public String getParticipateNo() {
         return participateNo;
     }
-
     public void setParticipateNo(String participateNo) {
         this.participateNo = participateNo;
     }
     public String getCompanyNo() {
         return companyNo;
     }
-
     public void setCompanyNo(String companyNo) {
         this.companyNo = companyNo;
     }
-    public String get조달업체명() {
+    public String getCompanyNm() {
         return companyNm;
     }
-
-    public void set조달업체명(String companyNm) {
+    public void setCompanyNm(String companyNm) {
         this.companyNm = companyNm;
     }
-    public Date get입찰일시() {
+    public Date getParticipateDate() {
         return participateDate;
     }
-
-    public void set입찰일시(Date participateDate) {
+    public void setParticipateDate(Date participateDate) {
         this.participateDate = participateDate;
     }
-    public Integer get제안가격() {
+    public Integer getOfferPrice() {
         return offerPrice;
     }
-
-    public void set제안가격(Integer offerPrice) {
+    public void setOfferPrice(Integer offerPrice) {
         this.offerPrice = offerPrice;
     }
-    public String get제안내용() {
+    public String getOfferContents() {
         return offerContents;
     }
-
-    public void set제안내용(String offerContents) {
+    public void setOfferContents(String offerContents) {
         this.offerContents = offerContents;
     }
-    public Boolean get수수료납부여부() {
+    public Boolean getFeePaymentFlag() {
         return feePaymentFlag;
     }
-
-    public void set수수료납부여부(Boolean feePaymentFlag) {
+    public void setFeePaymentFlag(Boolean feePaymentFlag) {
         this.feePaymentFlag = feePaymentFlag;
     }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    
 }

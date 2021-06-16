@@ -5,6 +5,7 @@ public class BiddingParticipationCanceled extends AbstractEvent {
     private Long id;
     private String noticeNo;
     private String participateNo;
+    private String phoneNumber;
 
     public Long getId() {
         return id;
@@ -27,4 +28,13 @@ public class BiddingParticipationCanceled extends AbstractEvent {
     public void setParticipateNo(String participateNo) {
         this.participateNo = participateNo;
     }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 }
